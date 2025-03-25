@@ -1,3 +1,4 @@
+from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -7,7 +8,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 import time
-from functions.compact import compactar_arquivos
+import sys
+project_root = Path(__file__).parent.parent
+sys.path.append(str(project_root))
+from functions.compact import compactar_arquivos  # noqa
 
 # Configurações
 DOWNLOAD_DIR = r"C:\Users\T-GAMER\Desktop\DEV pastas\IntuitiveCare\IntuitiveCare\teste1\downloaded_files"  # noqa E501
@@ -87,7 +91,7 @@ def main():
         time.sleep(3)
         driver.quit()
 
-    compactar_arquivos(DOWNLOAD_DIR)
+    compactar_arquivos(DOWNLOAD_DIR, 'anexos_compactados')
 
 
 if __name__ == "__main__":
