@@ -7,7 +7,7 @@ __pycache__/
 *.so
 *.txt
 !requirements.txt
-
+.env
 *.pdf
 *.zip
 *teste.py

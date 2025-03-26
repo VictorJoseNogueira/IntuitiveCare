@@ -3,7 +3,7 @@ import pdfplumber
 import pypdf as pydf
 import csv
 from zipfile import ZipFile
- # noqa
+import pandas as pd  # noqa
 
 
 file = r"teste1/downloaded_files/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
@@ -36,6 +36,13 @@ if os.path.exists(file):
             writer.writerows(table)
 
     print(f"\nExportadas {len(all_tables)} tabelas para output.csv")
+
+    df = pd.read_csv(csv_file)
+    df = df.rename(columns={
+        'OD': 'Seg. Odontológica',
+        'AMB': 'Seg. Ambulatoria'})
+    df = df.replace({'OD': 'Seg. Odontológica', 'AMB': 'Seg. Ambulatoria'}, regex=True)  # noqa E501
+    df.to_csv(csv_file, index=False)
 
     with ZipFile('Teste_Victor_Nogueira.zip', 'w') as zip:
         zip.write(csv_file)
