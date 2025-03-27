@@ -1,4 +1,3 @@
-import csv  # noqa
 import dotenv  # noqa
 import os  # noqa
 import mysql.connector  # noqa
