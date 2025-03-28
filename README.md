@@ -14,19 +14,19 @@ Este repositório contém a implementação dos testes de nivelamento v.250321, 
 
 ```
 /
-├── teste_1
+├── teste1
 │   ├── python_web_scraping.py  # Script para baixar e compactar os arquivos
 │   ├── downloaded_files/        # Pasta onde os arquivos baixados serão salvos
 │
-├── teste_2
+├── teste2
 │   ├── pdf_to_csv.py           # Script para converter dados do PDF para CSV e compactar
 │
-├── teste_3
+├── teste3
 │   ├── data/                   # Pasta contendo arquivos necessários
 │   ├── healthcare_operators_financial_importer.py  # Script para inserir dados no banco
 │   ├── top_10_insurers_largest_medical_expenses.py  # Script para analisar as maiores despesas
 │
-├── teste_4
+├── teste4
 │   ├── backend/                # Backend em Python (API para busca textual)
 │   ├── frontend/               # Frontend em Vue.js (Interface web)
 │   ├── postman/                # Coleção do Postman para testes da API
@@ -41,7 +41,7 @@ Este repositório contém a implementação dos testes de nivelamento v.250321, 
 
 ## 🛠 Requisitos
 - As dependências do backend estão listadas no arquivo `requirements.txt`.
-- As dependências do frontend estão listadas no arquivo `teste_4/frontend/package.json`.
+- As dependências do frontend estão listadas no arquivo `teste4/frontend/package.json`.
 
 ---
 
@@ -49,22 +49,22 @@ Este repositório contém a implementação dos testes de nivelamento v.250321, 
 
 ### 1️⃣ Teste de Web Scraping
 ```bash
-cd teste_1
+cd teste1
 python python_web_scraping.py
 ```
 Os arquivos serão salvos na pasta `downloaded_files/` e compactados automaticamente.
 
 ### 2️⃣ Teste de Transformação de Dados
 ```bash
-cd teste_2
+cd teste2
 python pdf_to_csv.py
 ```
-O CSV gerado será compactado no formato `Teste_{seu_nome}.zip`.
+O CSV gerado será compactado no formato `teste{seu_nome}.zip`.
 
 ### 3️⃣ Teste de Banco de Dados
 - Configure a conexão com o banco de dados no arquivo `.env`.
 ```bash
-cd teste_3
+cd teste3
 python healthcare_operators_financial_importer.py
 python top_10_insurers_largest_medical_expenses.py
 ```
@@ -73,7 +73,7 @@ Os dados serão importados para o banco, e os 10 maiores gastos serão exibidos.
 ### 4️⃣ Teste de API
 #### Inicialização do backend e frontend:
 ```bash
-python teste_4/start.py
+python teste4/start.py
 ```
 A interface estará disponível para interação.
 
