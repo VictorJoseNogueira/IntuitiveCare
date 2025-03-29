@@ -14,6 +14,9 @@ Este repositório contém a implementação dos testes de nivelamento v.250321, 
 
 ```
 /
+├── functions
+│   ├── __init__.py
+│   ├── compact.py               # script contendo uma function para compactar arquivos 
 ├── teste1
 │   ├── python_web_scraping.py  # Script para baixar e compactar os arquivos
 │   ├── downloaded_files/        # Pasta onde os arquivos baixados serão salvos
