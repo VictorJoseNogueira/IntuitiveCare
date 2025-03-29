@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main-layout">
-      <header>
+      <header class="header-container">
         <HeaderVue></HeaderVue>
       </header>
 
@@ -9,7 +9,7 @@
         <HomeVue/>
       </main>
 
-      <footer class="bg-dark text-white text-center py-3">
+      <footer class="bg-dark text-white text-center py-3 footer-container">
         <FooterVue></FooterVue>
       </footer>
     </div>
@@ -32,6 +32,19 @@ export default {
 </script>
 
 <style>
+.content{
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 1000px;
+}
+.header-container{
+  min-width: 1440px;
+
+}
+.footer-container{
+  min-width: 1440px;
+
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
