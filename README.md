@@ -13,7 +13,6 @@ Este repositório contém a implementação dos testes de nivelamento v.250321, 
 ## 📁 Estrutura do Repositório
 
 ```
-/
 ├── functions
 │   ├── __init__.py
 │   ├── compact.py               # script contendo uma function para compactar arquivos 
