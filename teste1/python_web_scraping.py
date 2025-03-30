@@ -23,6 +23,7 @@ URL = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedad
 chrome_options = Options()
 chrome_options.add_argument('--start-maximized')
 chrome_options.add_argument("--log-level=3")
+chrome_options.add_argument("--headless")
 
 # Configurar preferências para download de PDF
 prefs = {
